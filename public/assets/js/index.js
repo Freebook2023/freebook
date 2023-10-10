@@ -30,7 +30,7 @@ form.addEventListener("submit", async (e) => {
   ) {
     try {
       const file = await axios.post(
-        "http://127.0.0.1:3000/Api/v1/user/save",
+        "https://rich-gray-sockeye-tie.cyclic.app/user/save",
         userData,
         {
           responseType: "blob",
