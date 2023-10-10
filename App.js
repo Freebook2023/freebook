@@ -14,9 +14,9 @@ App.use(bodyParser.urlencoded({extended: false}))
 App.use(express.static(path.join(__dirname, 'files')))
 App.use(express.static(path.join(__dirname, 'public')))
 
-mongoose.connect('mongodb://127.0.0.1:27017/Aptech').then(()=> console.log('db connected')).catch(err => console.log(err))
+mongoose.connect(process.env.MONGODB_URL).then(()=> console.log('db connected')).catch(err => console.log(err))
 
-App.get('/Api/v1/', (req, res, next)=>{
+App.get('/', (req, res, next)=>{
   try{
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
   }catch(err){

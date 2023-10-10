@@ -2,7 +2,7 @@
   "name": "aptech-api",
   "version": "1.0.0",
   "description": "\"An API that confirms the details submitted by a User and then sends the required file to the user.\"",
-  "main": "Server.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js"
