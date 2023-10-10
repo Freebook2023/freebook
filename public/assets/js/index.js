@@ -39,9 +39,9 @@ form.addEventListener("submit", async (e) => {
       const url = URL.createObjectURL(file.data);
       window.open(url, "__blank");
       URL.revokeObjectURL(url);
+      whichSocialMediaInput.forEach((Element) => (Element.removeAttribute("checked")));
       fullName.value = "";
       email.value = "";
-      whichSocialMediaInput.forEach((Element) => (Element.removeAttribute("checked")));
     } catch (err) {
       if (err.response.status === 400) {
         errorHandle("Email already exists")
