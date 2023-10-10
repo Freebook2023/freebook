@@ -4,7 +4,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const path = require('path')
 
-const connection = process.env.MONGODB_URL,
+const connection = process.env.MONGODB_URL;
 const {userRoutes} = require('./routes')
 
 const App = express();
