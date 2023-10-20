@@ -5,7 +5,7 @@ const userSchema = new Schema({
     type: String,
     trim: true,
     minlength: 5,
-    required: [true, "Please Enter your Full Name"],
+    required: [true, "Please Enter your Password "],
   },
   email: {
     type: String,
