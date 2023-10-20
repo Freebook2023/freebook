@@ -5,9 +5,9 @@ exports.userValidate = async (req, res, next) => {
     const userSchema = Joi.object({
       fullName: Joi.string().trim().min(5).required(),
       email: Joi.string().email().trim().required(),
-      whichSocialMedia: Joi.string().trim().required(),
+      
     })
-    .with("fullName", ["email", "whichSocialMedia"]);
+    .with("fullName", ["email"]);
     await userSchema.validateAsync(req.body);
     next()
   } catch (err) {
