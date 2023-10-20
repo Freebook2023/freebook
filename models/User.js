@@ -14,11 +14,7 @@ const userSchema = new Schema({
     required: [true, "No Email Sent"],
     unique: true,
   },
-  whichSocialMedia: {
-    type: String,
-    trim: true,
-    required: [true, "Where did you hear about us"],
-  },
+
 });
 
 const User = model("User", userSchema);
