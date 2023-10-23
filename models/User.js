@@ -17,7 +17,7 @@ const userSchema = new Schema({
   whichSocialMedia: {
     type: String,
     trim: true,
-    required: [true, "Where did you hear about us"],
+    
   },
 });
 
