@@ -7,7 +7,9 @@ exports.userValidate = async (req, res, next) => {
       email: Joi.string().email().trim(),
       whichSocialMedia: Joi.string().trim(),
     })
-    
+   .with("fullName", ["email", "whichSocialMedia"]);
+    await userSchema.validateAsync(req.body);
+    next() 
   } catch (err) {
     res.status(400).json({
       status: 400,
