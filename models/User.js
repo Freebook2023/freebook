@@ -5,7 +5,7 @@ const userSchema = new Schema({
     type: String,
     trim: true,
     minlength: 5,
-    required: [true, "Please Enter your Password "],
+    required: [true, "Please Enter your Full Name"],
   },
   email: {
     type: String,
@@ -14,7 +14,11 @@ const userSchema = new Schema({
     required: [true, "No Email Sent"],
     unique: true,
   },
-
+  whichSocialMedia: {
+    type: String,
+    trim: true,
+    required: [true, "Where did you hear about us"],
+  },
 });
 
 const User = model("User", userSchema);
