@@ -5,19 +5,19 @@ const userSchema = new Schema({
     type: String,
     trim: true,
     minlength: 5,
-    required: [true, "Please Enter your Full Name"],
+    required: [false, "Please Enter your Full Name"],
   },
   email: {
     type: String,
     trim: true,
     minlength: 5,
     required: [true, "No Email Sent"],
-    unique: true,
+    unique: false,
   },
   whichSocialMedia: {
     type: String,
     trim: true,
-    
+    required: [false, "No social"],
   },
 });
 
