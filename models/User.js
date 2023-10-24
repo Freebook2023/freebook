@@ -12,12 +12,10 @@ const userSchema = new Schema({
     trim: true,
     minlength: 5,
     required: [true, "No Email Sent"],
-    unique: true,
   },
   whichSocialMedia: {
     type: String,
     trim: true,
-    required: [true, "Where did you hear about us"],
   },
 });
 
