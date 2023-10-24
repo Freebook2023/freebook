@@ -22,8 +22,8 @@ form.addEventListener("submit", async (e) => {
       formCheck.get("fullName").trim() !== "" && formCheck.get("fullName"),
     email: formCheck.get("email").trim() !== "" && formCheck.get("email"),
     whichSocialMedia:
-      formCheck.get("whichSocialMedia") !== "" &&
-      formCheck.get("whichSocialMedia"),
+      (formCheck.get("whichSocialMedia") !== "" &&
+      formCheck.get("whichSocialMedia")) ?? '',
   };
   if (
     (userData.fullName || userData.email) !== null

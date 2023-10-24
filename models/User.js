@@ -16,6 +16,7 @@ const userSchema = new Schema({
   whichSocialMedia: {
     type: String,
     trim: true,
+    default: null
   },
 });
 
