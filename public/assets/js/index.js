@@ -26,7 +26,7 @@ form.addEventListener("submit", async (e) => {
       formCheck.get("whichSocialMedia"),
   };
   if (
-    (userData.fullName || userData.email || userData.whichSocialMedia) !== null
+    (userData.fullName || userData.email) !== null
   ) {
     try {
       const file = await axios.post(
